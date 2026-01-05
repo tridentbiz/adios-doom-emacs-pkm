@@ -1,22 +1,22 @@
 [plugin]
 name = "doom-emacs-pkm"
-version = "0.1.0"
-description = "AdiOS doom-emacs-pkm plugin"
+version = "1.0.0"
+description = "Enterprise-grade Doom Emacs configuration for dual-brain knowledge management with org-roam"
 category = "productivity"
 license = "MIT"
 author = "TridentBiz Team <team@tridentbiz.com>"
 homepage = "https://github.com/tridentbiz/adios-doom-emacs-pkm"
 repository = "https://github.com/tridentbiz/adios-doom-emacs-pkm"
-keywords = ["adios", "plugin", "productivity", "doom-emacs-pkm"]
+keywords = ["adios", "emacs", "org-roam", "pkm", "knowledge-management", "productivity"]
 
 [compatibility]
 adios-core = ">=1.0.0"
-platforms = ["wava", "ewa", "mava"]
+platforms = ["wava", "ewa"]  # Workstation and server access
 
 [dependencies]
-required_core_services = []
-optional_core_services = ["adios-luna-ai", "adios-sync-protocol"]
-system_dependencies = []
+required_core_services = ["adios-sync-protocol", "adios-context-capture"]
+optional_core_services = ["adios-luna-ai", "adios-knowledge-graph", "adios-gamification"]
+system_dependencies = ["emacs", "ripgrep", "sqlite3", "git", "fd-find"]
 
 [marketplace]
 price = "free"
@@ -24,4 +24,7 @@ support_tier = "community"
 standalone_sellable = true
 
 [integration]
-circular_flow = ["learn", "capture", "improve"]
+# AdiOS integration points
+circular_flow = ["learn", "capture", "improve"]  # Participates in Learn->Capture->Improve cycle
+data_sync = ["personal_brain_local", "ewa_brain_enterprise"]
+ai_integration = ["luna_ai_suggestions", "context_aware_capture"]
