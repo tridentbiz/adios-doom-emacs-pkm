@@ -1,3 +1,4 @@
+mod integration;
 //! AdiOS doom-emacs-pkm plugin
 //! 
 //! Productivity plugin for the AdiOS ecosystem.
